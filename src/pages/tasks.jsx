@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import API from "../api/axiosinstance";
 import { updateTaskStatus } from "../api/taskApi";
-import "./Tasks.css";
+import "./tasks.css";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
