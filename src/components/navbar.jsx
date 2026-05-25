@@ -5,7 +5,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaUserCircle, FaBars, FaTimes, FaSignOutAlt } from "react-icons/fa";
 
 import useAuth from "../hooks/useAuth";
-import "./Navbar.css";
+import "./navbar.css";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

@@ -19,8 +19,8 @@ import {
   User,
   
 } from "lucide-react";
-import "./Sidebar.css";
-import { AuthContext } from "../context/AuthContext";
+import "./sidebar.css";
+import { AuthContext } from "../context/authcontext";
 
 const Sidebar = ({ collapsed, setCollapsed }) => {
   const navigate = useNavigate();

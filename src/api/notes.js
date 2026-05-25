@@ -1,4 +1,4 @@
-import API from "./axiosInstance";
+import API from "./axiosinstance";
 
 export const getUserNotes = () => API.get("/api/notes");
 export const createNote = (data) => API.post("/api/notes", data);

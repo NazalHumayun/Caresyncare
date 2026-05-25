@@ -29,7 +29,7 @@ import {
   FaArrowUp,
   FaArrowDown
 } from "react-icons/fa";
-import API from "../api/axiosInstance";
+import API from "../api/axiosinstance";
 import "./AnalyticsDashboard.css";
 import { Link } from "react-router-dom";
 

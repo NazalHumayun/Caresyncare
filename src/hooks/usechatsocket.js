@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_URL = "https://frontend-caresync.vercel.app";
+const SOCKET_URL = "https://caresync-care-production.up.railway.app";
 
 const useChatSocket = (token, familyId, handlers = {}) => {
   const socketRef = useRef(null);

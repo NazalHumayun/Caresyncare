@@ -1,5 +1,5 @@
 // src/api/doctors.js
-import API from "./axiosInstance"; // axios instance with baseURL & token
+import API from "./axiosinstance"; // axios instance with baseURL & token
 
 // Get doctors list (supports filters, grouping, pagination)
 export const getDoctors = (params = {}) => API.get("/api/doctors", { params });

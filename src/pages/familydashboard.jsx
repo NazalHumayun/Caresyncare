@@ -1,6 +1,6 @@
 // src/pages/FamilyDashboard.jsx
 import { useState, useEffect } from "react";
-import API from "../api/axiosInstance";
+import API from "../api/axiosinstance";
 import { Modal, Form, Button } from "react-bootstrap";
 
 import {
@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { FaUserPlus, FaCopy } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
-import "./FamilyDashboard.css";
+import "./familydashboard.css";
 
 const FamilyDashboard = () => {
   const { user } = useAuth();

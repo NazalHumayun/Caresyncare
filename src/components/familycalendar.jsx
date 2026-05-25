@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
-import API from "../api/axiosInstance";
-import 'react-calendar/dist/Calendar.css';
+import API from "../api/axiosinstance";
+import 'react-calendar/dist/calendar.css';
 import { parseISO, isSameDay } from "date-fns";
 import { FaTasks, FaClipboardList } from "react-icons/fa"; // Import icons
 
