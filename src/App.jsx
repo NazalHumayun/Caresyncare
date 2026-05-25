@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 import ScrollToTop from "./components/scrolltotop";
 import ProtectedRoute from "./components/protectedroute";
 import Loader from "./components/loader";
-import usePageLoader from "./hooks/usepageloader";
+import usePageLoader from "./hooks/usePageLoader";
 
 // Public Pages
 import Home from "./pages/home";
