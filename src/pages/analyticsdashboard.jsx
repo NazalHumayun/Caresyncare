@@ -30,7 +30,7 @@ import {
   FaArrowDown
 } from "react-icons/fa";
 import API from "../api/axiosinstance";
-import "./AnalyticsDashboard.css";
+import "./analyticsdashboard.css";
 import { Link } from "react-router-dom";
 
 const COLORS = ["#10b981", "#3b82f6", "#f59e0b", "#ef4444", "#8b5cf6"];
