@@ -13,7 +13,7 @@ import {
   Trash2,
   Edit2,
 } from "lucide-react";
-import API from "../api/axiosInstance";
+import API from "../api/axiosinstance";
 import { updateTaskStatus } from "../api/taskApi";
 import "./Tasks.css";
 
