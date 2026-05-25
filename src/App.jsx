@@ -15,7 +15,7 @@ import usePageLoader from "./hooks/usePageLoader";
 // Public Pages
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Signup from "./pages/signupZignup";
+import Signup from "./pages/signup";
 import ForgotPassword from "./pages/forgotpassword";
 import ResetPassword from "./pages/resetpassword";
 import DoctorsList from "./pages/doctorslist";
