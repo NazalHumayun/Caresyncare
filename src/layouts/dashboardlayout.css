@@ -1,0 +1,182 @@
+/* dashboardlayout.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* ✅ prevent body scroll */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* ─── Layout Shell ─── */
+.dashboard-container {
+  display: flex;
+  height: 100vh;        /* ✅ lock to viewport */
+  overflow: hidden;     /* ✅ children manage their own scroll */
+  background: #f8fafc;
+}
+
+/* ─── Sidebar ─── */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  overflow-y: auto;     /* ✅ sidebar scrolls independently if needed */
+  flex-shrink: 0;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-brand {
+  justify-content: center;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0a0a0a;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ─── Right Side ─── */
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;        /* ✅ match viewport height */
+  overflow: hidden;     /* ✅ children manage their own scroll */
+  min-width: 0;         /* ✅ prevent flex blowout */
+  background-color: #f9f9f9;
+  transition: margin-left 0.3s;
+}
+
+/* ─── Topbar ─── */
+.dashboard-topbar {
+  height: 93px;
+  flex-shrink: 0;       /* ✅ topbar never shrinks away */
+  background: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-left h2 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #ececec;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ─── Scrollable Page Content ─── */
+.dashboard-page-content {
+  flex: 1;
+  overflow-y: auto;     /* ✅ ONLY this area scrolls */
+  overflow-x: hidden;
+  padding: 25px 30px;
+  background: #e9f3fd;
+}
+
+/* ─── Notification Wrapper ─── */
+.notification-wrapper {
+  position: relative;
+  cursor: pointer;
+  color: #dfdfdf;
+  transition: 0.2s;
+}
+
+.notification-wrapper:hover {
+  color: #2563eb;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+/* ─── Notification Dropdown ─── */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 280px;
+  background: rgb(231, 231, 231);
+  color: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.notification-dropdown h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.notification-item {
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.notification-item:hover {
+  background: #b9d9fa;
+  color: #2563eb;
+}
+
+.notification-item.unread {
+  background-color: #ffecec;
+  font-weight: 600;
+}
+
+.no-notifications {
+  font-size: 13px;
+  color: #64748b;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
